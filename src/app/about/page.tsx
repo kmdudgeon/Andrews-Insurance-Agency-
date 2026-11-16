@@ -90,8 +90,8 @@ export default function AboutPage() {
             You can verify any producer license through the Indiana Department of Insurance or the
             National Insurance Producer Registry (NIPR).
           </p>
-          <Link href="/contact" className="btn-outline mt-5 w-full">
-            Schedule a conversation
+          <Link href="/team" className="btn-outline mt-5 w-full">
+            Meet the team
           </Link>
         </section>
       </section>

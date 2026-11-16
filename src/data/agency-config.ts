@@ -65,6 +65,49 @@ export const broker = {
   nonresidentHealthLicense: "W925384",
 } as const;
 
+export type TeamMember = {
+  name: string;
+  initials: string;
+  title: string;
+  bio: string[];
+  helpsWith: string[];
+  credentials: { label: string; value: string }[];
+  /** True until a real name and bio are supplied. Placeholders are left out of search data. */
+  placeholder?: boolean;
+};
+
+/** People shown on the Meet the Team page. Replace the placeholder entry with the real team member. */
+export const team: TeamMember[] = [
+  {
+    name: broker.name,
+    initials: "JA",
+    title: `Owner & ${broker.title}`,
+    bio: [
+      "Justin founded Andrews Insurance Agency in 2023 and works directly with every client, from the first quote through each renewal.",
+      "As an independent broker, he compares coverage from about 50 insurance companies and acts as your advocate if you ever need to file a claim.",
+    ],
+    helpsWith: [
+      "Auto, home and life insurance",
+      "Health, dental and vision plans",
+      "Short-term and long-term disability",
+      "Business, garage and liability policies",
+    ],
+    credentials: [
+      { label: "National Producer Number", value: `NPN #${broker.npn}` },
+      { label: "Nonresident Health License", value: `#${broker.nonresidentHealthLicense}` },
+    ],
+  },
+  {
+    name: "Team member",
+    initials: "",
+    title: "Name and role coming soon",
+    bio: ["We are putting the finishing touches on this profile. Check back soon to meet the rest of our team."],
+    helpsWith: [],
+    credentials: [],
+    placeholder: true,
+  },
+];
+
 export const counties = ["Noble", "DeKalb", "Allen", "LaGrange", "Steuben"] as const;
 
 export type CoverageKey = "auto" | "home" | "health" | "life" | "disability" | "commercial";
@@ -153,6 +196,7 @@ export const navigation = {
     { href: "/locations/kendallville-in", label: "Locations" },
     { href: "/resources", label: "Resources" },
     { href: "/about", label: "About" },
+    { href: "/team", label: "Our Team" },
     { href: "/contact", label: "Contact" },
   ],
   legal: [

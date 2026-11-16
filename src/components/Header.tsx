@@ -14,15 +14,18 @@ export function Header() {
 
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
           <CoverageMenu />
-          {navigation.primary.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="inline-flex min-h-11 items-center rounded-lg px-2.5 py-2 text-[15px] font-semibold whitespace-nowrap text-navy-900 hover:bg-navy-50"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {/* Locations stays in the mobile menu and footer; the desktop bar has room for five links. */}
+          {navigation.primary
+            .filter((item) => item.label !== "Locations")
+            .map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="inline-flex min-h-11 items-center rounded-lg px-2.5 py-2 text-[15px] font-semibold whitespace-nowrap text-navy-900 hover:bg-navy-50"
+              >
+                {item.label}
+              </Link>
+            ))}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -34,7 +37,10 @@ export function Header() {
             <span className="sr-only">Call </span>
             {agency.phone.display}
           </a>
-          <Link href="/quote" className="btn-cta hidden !min-h-11 !px-4 !py-2 !text-[15px] whitespace-nowrap md:inline-flex">
+          <Link
+            href="/quote"
+            className="btn-cta hidden !min-h-11 !px-4 !py-2 !text-[15px] whitespace-nowrap md:inline-flex"
+          >
             Get a Free Quote
           </Link>
           <MobileNav />

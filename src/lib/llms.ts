@@ -50,6 +50,7 @@ export function buildLlmsTxt() {
 - [Service Center](${url("/service-center")}): carrier claims and billing contacts, ID card and certificate requests
 - [Contact and appointments](${url("/contact")}): phone, email, directions and appointment requests
 - [About the agency and broker](${url("/about")})
+- [Meet the team](${url("/team")})
 
 ## Coverage
 

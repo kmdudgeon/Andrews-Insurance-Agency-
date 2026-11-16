@@ -192,8 +192,8 @@ export default function HomePage() {
             solutions for each of our clients and served as their advocate when it is time to file a
             claim. When you call, you talk with {broker.shortName}, your broker, not a call tree.
           </p>
-          <Link href="/about" className="mt-6 inline-flex items-center gap-1.5 font-semibold text-royal hover:underline">
-            Meet your broker
+          <Link href="/team" className="mt-6 inline-flex items-center gap-1.5 font-semibold text-royal hover:underline">
+            Meet the team
             <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>

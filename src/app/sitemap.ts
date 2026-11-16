@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
     entry("/service-center", 0.7),
     entry("/about", 0.7),
+    entry("/team", 0.7),
     entry("/contact", 0.7),
     entry("/resources", 0.7, "weekly"),
     ...articles.map((article) => entry(`/resources/${article.slug}`, 0.6)),
