@@ -29,7 +29,7 @@ export default function AboutPage() {
         title="We take care of you"
         eyebrow="About Andrews Insurance Agency"
         crumbs={crumbs}
-        quickAnswer={`Andrews Insurance Agency is an independent insurance agency founded in ${agency.foundingYear} and located at ${agency.address.oneLine}. Principal Broker ${broker.name} (NPN #${broker.npn}) compares coverage from multiple carriers and personally advocates for clients during claims.`}
+        quickAnswer={`Andrews Insurance Agency is an independent insurance agency founded in ${agency.foundingYear} and located at ${agency.address.oneLine}. Principal Broker ${broker.name} (NPN #${broker.npn}) compares coverage from about 50 insurance companies and personally advocates for clients during claims.`}
       />
 
       <section aria-labelledby="story-heading" className="container-page grid gap-10 py-14 lg:grid-cols-[1fr_22rem]">
@@ -82,7 +82,7 @@ export default function AboutPage() {
               <BadgeCheck size={18} className="mt-0.5 shrink-0 text-royal" aria-hidden="true" />
               <div>
                 <dt className="font-semibold text-navy-900">Lines of insurance</dt>
-                <dd className="text-slate-700">Auto, home, health, life and commercial</dd>
+                <dd className="text-slate-700">Auto, home, health, life, disability and commercial</dd>
               </div>
             </div>
           </dl>

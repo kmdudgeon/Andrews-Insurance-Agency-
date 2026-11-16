@@ -9,14 +9,14 @@ import { buildPageSchema } from "@/lib/schema";
 
 const title = "Get a Free Insurance Quote";
 const description =
-  "Request auto, home, health, life or business insurance quotes from multiple carriers in about two minutes. No Social Security number required.";
+  "Request auto, home, health, life, disability or business insurance quotes from about 50 companies in about two minutes. No Social Security number required.";
 const crumbs = [{ name: "Free Quote", path: "/quote" }];
 
 export const metadata: Metadata = pageMetadata({ title, description, path: "/quote" });
 
 const points = [
   { icon: Clock, title: "About two minutes", text: "Three short steps. Your progress is saved in this browser tab if you step away." },
-  { icon: Scale, title: "Multiple carriers", text: "One request lets us compare options from several insurance companies." },
+  { icon: Scale, title: "About 50 companies", text: "One request lets us compare options across the insurance companies we work with." },
   { icon: Lock, title: "No sensitive data", text: "We never ask for a Social Security number, driver's license or payment card online." },
 ];
 

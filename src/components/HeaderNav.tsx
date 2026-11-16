@@ -72,7 +72,7 @@ export function CoverageMenu() {
             <Link href="/quote" className="block rounded-xl bg-navy-900 p-3 text-white hover:bg-navy-800">
               <span className="block font-semibold">Compare quotes</span>
               <span className="mt-0.5 block text-sm text-navy-100">
-                One request, multiple carriers
+                One request, about 50 companies
               </span>
             </Link>
           </li>

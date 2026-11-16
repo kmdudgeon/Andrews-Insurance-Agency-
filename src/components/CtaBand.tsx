@@ -17,10 +17,10 @@ export function CtaBand({
           <p className="mt-2 text-lg text-navy-100">{text}</p>
         </div>
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-          <Link href={coverage ? `/quote?coverage=${coverage}` : "/quote"} className="btn-gold">
+          <Link href={coverage ? `/quote?coverage=${coverage}` : "/quote"} className="btn-gold whitespace-nowrap">
             Get My Free Quote
           </Link>
-          <a href={agency.phone.href} className="btn-ghost-dark font-mono">
+          <a href={agency.phone.href} className="btn-ghost-dark font-mono whitespace-nowrap">
             <Phone size={18} aria-hidden="true" />
             {agency.phone.display}
           </a>

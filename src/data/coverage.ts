@@ -194,25 +194,74 @@ export const coverageLines: CoverageLine[] = [
     ],
   },
   {
+    slug: "disability-insurance",
+    key: "disability",
+    name: "Disability Insurance",
+    h1: "Short-Term & Long-Term Disability Insurance",
+    metaTitle: "Disability Insurance in Kendallville, IN | Short-Term & Long-Term",
+    metaDescription:
+      "Protect your paycheck with short-term and long-term disability insurance. A local independent broker compares disability income coverage from many insurance companies.",
+    quickAnswer:
+      "Andrews Insurance Agency helps Northeast Indiana workers, self-employed people and employers compare short-term and long-term disability insurance. Disability insurance replaces part of your income if an illness or injury keeps you from working. We compare benefit amounts, waiting periods and benefit periods across many insurance companies.",
+    intro:
+      "Your ability to earn a living is likely your most valuable asset. If an illness or injury kept you off the job for months, disability insurance keeps money coming in for the mortgage, groceries and bills. We help you choose coverage that fits your occupation, income and budget.",
+    facts: [
+      { term: "Short-term disability", detail: "Replaces part of your income for a limited time, commonly a few months up to a year" },
+      { term: "Long-term disability", detail: "Starts after a longer waiting period and can pay for years, or to retirement age, depending on the policy" },
+      { term: "Typical benefit", detail: "A percentage of your income, often around 50% to 70%, depending on the policy" },
+      { term: "Who it is for", detail: "Employees, self-employed people, business owners and employer groups" },
+    ],
+    coverages: [
+      { title: "Short-term disability", description: "Income replacement for shorter absences such as recovery from surgery, an injury or a serious illness." },
+      { title: "Long-term disability", description: "Protection against a lasting illness or injury that keeps you out of work for an extended period." },
+      { title: "Individual policies", description: "Coverage you own personally, so it stays with you if you change jobs." },
+      { title: "Self-employed & business owners", description: "Income protection when there is no employer plan or paid leave to fall back on." },
+      { title: "Employer group plans", description: "Short-term and long-term disability benefits that businesses can offer to their employees." },
+      { title: "Supplementing work coverage", description: "Additional coverage to fill the gap when an employer plan replaces only part of your pay." },
+    ],
+    localInsights: [
+      { title: "Workers' compensation only covers work injuries", description: "Most disabilities come from illnesses and injuries that happen off the job, which workers' compensation does not cover. Disability insurance covers you whether or not it happened at work." },
+      { title: "Trades, manufacturing and farm work", description: "If your income depends on physical work, even a moderate injury can stop your paycheck. How a policy defines disability for your occupation matters, and we walk you through it." },
+      { title: "Check what your employer already provides", description: "Many employer plans cover only part of your pay and end if you leave. Bring your benefits summary and we will show you where the gaps are." },
+    ],
+    comparison: {
+      caption: "Short-term vs. long-term disability at a glance",
+      headers: ["Feature", "Short-term disability", "Long-term disability"],
+      rows: [
+        ["Waiting period before benefits", "Often 0–14 days", "Often 90–180 days"],
+        ["How long benefits can last", "Months, up to about a year", "Years, or to retirement age"],
+        ["Typical use", "Surgery, injury, short illness", "Lasting illness or injury"],
+      ],
+    },
+    faqs: [
+      { question: "What is the difference between short-term and long-term disability insurance?", answer: "Short-term disability starts quickly and pays for a limited time, commonly a few months up to a year. Long-term disability begins after a longer waiting period, often 90 to 180 days, and can pay for years or until retirement age, depending on the policy." },
+      { question: "How much of my income does disability insurance replace?", answer: "It depends on the policy. Many plans replace roughly 50% to 70% of your income, up to a monthly maximum. We compare benefit amounts and costs across insurance companies so you can choose what fits." },
+      { question: "Can I get disability insurance if I am self-employed?", answer: "Yes. Individual disability policies are available to self-employed people and business owners. The insurance company will ask about your occupation and income to determine the benefit you qualify for." },
+      { question: "Doesn't workers' compensation cover me if I can't work?", answer: "Only for injuries and illnesses caused by your job. Disability insurance covers conditions that happen off the job as well, which is where most disabilities come from." },
+    ],
+  },
+  {
     slug: "commercial-insurance",
     key: "commercial",
     name: "Commercial Insurance",
-    h1: "Small Business, Contractor & Farm Insurance",
-    metaTitle: "Business Insurance in Kendallville, IN | Liability, BOP, Work Comp & Farm",
+    h1: "Business, Corporate, Garage & Liability Insurance",
+    metaTitle: "Business Insurance in Kendallville, IN | Liability, Garage Policies & BOP",
     metaDescription:
-      "Commercial insurance for Northeast Indiana businesses: general liability, business owners policies, commercial auto, workers' compensation, contractor and farm coverage.",
+      "Commercial and corporate insurance for Northeast Indiana businesses: liability policies, garage policies, business owners policies, commercial auto, workers' compensation and farm coverage.",
     quickAnswer:
-      "Andrews Insurance Agency compares commercial insurance from multiple carriers for small businesses, contractors and farms in Noble, DeKalb and surrounding Indiana counties. We quote general liability, business owners policies (BOP), commercial auto, workers' compensation, contractor liability and farm coverage, and issue certificates of insurance on request.",
+      "Andrews Insurance Agency compares commercial insurance from many insurance companies for small businesses, corporations, contractors and farms in Noble, DeKalb and surrounding Indiana counties. We quote liability policies, garage policies, business owners policies (BOP), commercial auto, workers' compensation, contractor liability and farm coverage, and issue certificates of insurance on request.",
     intro:
       "Your business is unique, and a one-size-fits-all policy rarely fits. We learn how your operation works, then compare carriers to build coverage for your property, vehicles, employees and liability, with one local broker to call when you need a certificate or have a claim.",
     facts: [
-      { term: "Core policies", detail: "General liability, BOP, commercial property, commercial auto, workers' compensation" },
-      { term: "Who we serve", detail: "Contractors and trades, retail, offices, restaurants, landlords, farms and agribusiness" },
+      { term: "Core policies", detail: "Liability, garage policies, BOP, commercial property, commercial auto, workers' compensation" },
+      { term: "Who we serve", detail: "Corporations and small businesses, auto dealers and repair shops, contractors, retail, offices, landlords and farms" },
       { term: "Workers' compensation", detail: "Generally required for Indiana employers with employees" },
       { term: "Certificates of insurance", detail: "Requested online through our Service Center" },
     ],
     coverages: [
       { title: "General liability", description: "Protection against third-party bodily injury, property damage and advertising injury claims." },
+      { title: "Garage policy", description: "Coverage built for auto dealers, repair shops, body shops and towing operators, including garage liability and garagekeepers coverage for customers' vehicles in your care." },
+      { title: "Professional & umbrella liability", description: "Errors and omissions coverage for professional services, plus commercial umbrella policies that add liability limits above your other policies." },
       { title: "Business owners policy (BOP)", description: "Property, liability and business income coverage bundled for small and mid-sized businesses." },
       { title: "Commercial auto", description: "Coverage for trucks, vans, trailers and employees driving on company business." },
       { title: "Workers' compensation", description: "Medical and wage benefits for employees injured on the job, plus employer liability." },
@@ -228,6 +277,7 @@ export const coverageLines: CoverageLine[] = [
       { question: "What insurance does a small business in Indiana need?", answer: "Most small businesses start with general liability and property coverage, often combined in a business owners policy. Businesses with employees generally need workers' compensation, and those with vehicles need commercial auto. Your industry and contracts may require more." },
       { question: "Is workers' compensation required in Indiana?", answer: "Indiana generally requires employers to carry workers' compensation insurance for their employees, with limited exceptions. Sole proprietors and partners can often choose whether to cover themselves." },
       { question: "How do I get a certificate of insurance (COI)?", answer: "Existing clients can request a certificate through our online Service Center or by calling (260) 582-7681. Certificates are issued once verified with your carrier; a website request alone does not change coverage." },
+      { question: "What is a garage policy?", answer: "A garage policy is commercial coverage designed for businesses that sell, service, repair, store or tow vehicles. It typically combines garage liability for your operations with garagekeepers coverage, which protects customers' vehicles while they are in your care." },
       { question: "Do you insure farms?", answer: "Yes. We quote farm and agribusiness policies covering dwellings, barns and outbuildings, machinery, livestock and farm liability for operations across Northeast Indiana." },
     ],
   },

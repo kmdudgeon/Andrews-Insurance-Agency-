@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
+  Activity,
   ArrowRight,
   BadgeCheck,
   Briefcase,
@@ -26,17 +27,24 @@ import { buildPageSchema } from "@/lib/schema";
 
 const title = "Andrews Insurance Agency | Independent Insurance in Kendallville, IN";
 const description =
-  "Independent insurance agency in Kendallville, Indiana. Compare auto, home, health, life and business insurance from multiple carriers with a local broker. Free quotes.";
+  "Independent insurance agency in Kendallville, Indiana. Compare auto, home, health, life, disability and business insurance from about 50 companies with a local broker. Free quotes.";
 
 export const metadata: Metadata = {
   ...pageMetadata({ title, description, path: "/" }),
   title: { absolute: title },
 };
 
-const icons = { auto: Car, home: Home, health: HeartPulse, life: Umbrella, commercial: Briefcase };
+const icons = {
+  auto: Car,
+  home: Home,
+  health: HeartPulse,
+  life: Umbrella,
+  disability: Activity,
+  commercial: Briefcase,
+};
 
 const trust = [
-  { icon: Scale, title: "Independent agency freedom", text: "We work for you, not one insurance company." },
+  { icon: Scale, title: "Independent agency freedom", text: `We shop ${agency.carrierCount} insurance companies for you.` },
   { icon: Star, title: `${agency.reputation.googleRating}-star local reputation`, text: "Rated 5.0 out of 5 on Google Reviews." },
   { icon: BadgeCheck, title: "Licensed Indiana broker", text: `NPN #${broker.npn}`, mono: true },
   { icon: HandHeart, title: "Direct claims advocacy", text: "We stand with you when you file a claim." },
@@ -61,20 +69,20 @@ export default function HomePage() {
             The Sensible Approach to Risk Management
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-navy-100 sm:text-xl">
-            We are an independent agency in Kendallville that shops multiple carriers for your auto,
-            home, health, life and business insurance, so Northeast Indiana families get the right
-            coverage at a fair price.
+            We are an independent agency in Kendallville that shops {agency.carrierCount} insurance
+            companies for your auto, home, health, life, disability and business coverage, so
+            Northeast Indiana families get the right protection at a fair price.
           </p>
 
-          <div className="mt-8 max-w-3xl rounded-2xl border border-white/20 bg-white/10 p-4 sm:p-5">
+          <div className="mt-8 max-w-4xl rounded-2xl border border-white/20 bg-white/10 p-4 sm:p-5">
             <h2 className="font-sans text-base font-semibold tracking-normal text-white">
               What would you like a quote for?
             </h2>
-            <ul className="mt-3 grid grid-cols-2 gap-2.5 sm:grid-cols-5">
+            <ul className="mt-3 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6">
               {coverageOptions.map((option) => {
                 const Icon = icons[option.key];
                 return (
-                  <li key={option.key} className="last:col-span-2 sm:last:col-span-1">
+                  <li key={option.key}>
                     <Link
                       href={`/quote?coverage=${option.key}`}
                       className="flex min-h-20 flex-col items-center justify-center gap-1.5 rounded-xl bg-white px-2 py-3 text-center text-sm font-semibold text-navy-900 transition-colors hover:bg-gold"
@@ -143,7 +151,7 @@ export default function HomePage() {
               </li>
             );
           })}
-          <li>
+          <li className="sm:col-span-2 lg:col-span-3">
             <Link href="/service-center" className="on-dark group flex h-full flex-col rounded-2xl bg-navy-900 p-6 text-white transition-colors hover:bg-navy-800">
               <h3 className="text-xl font-bold">Already a client?</h3>
               <p className="mt-2 flex-1 text-navy-100">

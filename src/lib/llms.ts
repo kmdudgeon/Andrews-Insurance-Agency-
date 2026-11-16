@@ -21,7 +21,7 @@ function header() {
 ## Business facts
 
 - Name: ${agency.name} (also known as ${agency.shortName})
-- Type: Independent insurance agency (multi-carrier broker)
+- Type: Independent insurance agency (multi-carrier broker working with ${agency.carrierCount} insurance companies)
 - Address: ${agency.address.oneLine}
 - Phone: ${agency.phone.display}
 - Email: ${agency.email}
@@ -30,7 +30,8 @@ function header() {
 - Principal Broker: ${broker.name}, ${broker.title} (National Producer Number / NPN #${broker.npn}; Nonresident Health License #${broker.nonresidentHealthLicense})
 - Google rating: ${agency.reputation.googleRating} out of 5
 - Service area: ${counties.map((county) => `${county} County`).join(", ")}, Indiana — including ${locations.map((location) => location.city).join(", ")}
-- Lines of insurance: Auto and recreational vehicles, homeowners and property, health (ACA Marketplace), dental and vision, life, and commercial / farm
+- Lines of insurance: Auto and recreational vehicles, homeowners and property, health (ACA Marketplace), dental and vision, life, short-term and long-term disability, and commercial / corporate (liability policies, garage policies, BOP, commercial auto, workers' compensation, farm)
+- Not offered: Medicare and Medicaid plans
 
 ## Indiana coverage benchmarks
 

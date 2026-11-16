@@ -13,7 +13,7 @@ const noSensitiveData = (value: string) =>
   !/\b\d{3}-\d{2}-\d{4}\b/.test(value) && !/\b(?:\d[ -]?){13,16}\b/.test(value);
 const sensitiveMessage = "Please remove Social Security or card numbers from this field.";
 
-export const coverageKeys = ["auto", "home", "health", "life", "commercial"] as const;
+export const coverageKeys = ["auto", "home", "health", "life", "disability", "commercial"] as const;
 
 export const quoteSchema = z.object({
   coverageTypes: z.array(z.enum(coverageKeys)).min(1, "Choose at least one coverage type"),

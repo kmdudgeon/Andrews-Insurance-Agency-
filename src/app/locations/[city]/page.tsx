@@ -141,7 +141,7 @@ export default async function LocationPage({ params }: PageProps<"/locations/[ci
         <h2 id="lines-heading" className="text-2xl font-bold text-navy-900 sm:text-3xl">
           Coverage available in {location.city}
         </h2>
-        <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {coverageLines.map((line) => (
             <li key={line.slug}>
               <Link href={`/coverage/${line.slug}`} className="flex min-h-14 items-center justify-between gap-2 rounded-xl border border-line bg-white p-4 font-semibold text-navy-900 hover:border-royal hover:bg-blue-50">

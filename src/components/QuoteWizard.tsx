@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore, useTransition } from "react";
-import { Briefcase, Car, Check, HeartPulse, Home, Umbrella } from "lucide-react";
+import { Activity, Briefcase, Car, Check, HeartPulse, Home, Umbrella } from "lucide-react";
 import { submitQuote } from "@/app/actions";
 import { agency, coverageOptions, type CoverageKey } from "@/data/agency-config";
 import { Field, FormError, SensitiveDataNote, SuccessPanel, TcpaConsent } from "./form";
@@ -13,6 +13,7 @@ const icons: Record<CoverageKey, typeof Car> = {
   home: Home,
   health: HeartPulse,
   life: Umbrella,
+  disability: Activity,
   commercial: Briefcase,
 };
 
@@ -88,11 +89,20 @@ const detailFields: Record<CoverageKey, { title: string; fields: DetailField[] }
       { key: "life_amount", label: "Approximate coverage amount", options: ["Under $50,000", "$50,000 – $250,000", "$250,000 – $500,000", "$500,000 – $1,000,000", "Over $1,000,000", "Not sure yet"] },
     ],
   },
+  disability: {
+    title: "Disability income",
+    fields: [
+      { key: "disability_type", label: "Type of coverage", options: ["Short-term disability", "Long-term disability", "Both", "Not sure yet"] },
+      { key: "disability_for", label: "Who is the coverage for?", options: ["Myself", "My employees (group plan)", "Not sure yet"] },
+      { key: "disability_occupation", label: "Occupation", placeholder: "e.g. Electrician, nurse, office manager" },
+    ],
+  },
   commercial: {
     title: "Business",
     fields: [
-      { key: "business_name", label: "Business name", placeholder: "Business or farm name" },
-      { key: "business_industry", label: "Industry or type of work", placeholder: "e.g. Roofing contractor, retail shop, grain farm" },
+      { key: "business_name", label: "Business name", placeholder: "Business name" },
+      { key: "business_industry", label: "Industry or type of work", placeholder: "e.g. Auto repair shop, roofing contractor, retail store" },
+      { key: "business_coverage", label: "Coverage needed", options: ["General liability", "Garage policy", "Business owners policy (BOP)", "Commercial auto", "Workers' compensation", "Several / not sure"] },
       { key: "business_employees", label: "Number of employees", options: ["Just me", "2–5", "6–20", "21–50", "Over 50"] },
     ],
   },

@@ -35,7 +35,7 @@ create table if not exists public.quote_leads (
   status text not null default 'new',
   constraint quote_leads_coverage_types_valid check (
     cardinality(coverage_types) > 0
-    and coverage_types <@ array['auto', 'home', 'health', 'life', 'commercial']::text[]
+    and coverage_types <@ array['auto', 'home', 'health', 'life', 'disability', 'commercial']::text[]
   ),
   constraint quote_leads_tcpa_required check (tcpa_consent_granted = true)
 );

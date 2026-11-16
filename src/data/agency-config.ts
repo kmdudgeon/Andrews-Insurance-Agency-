@@ -13,8 +13,10 @@ export const agency = {
   shortName: "Andrews Insurance",
   tagline: "The Sensible Approach to Risk Management",
   description:
-    "Andrews Insurance Agency is an independent insurance agency in Kendallville, Indiana that compares auto, home, health, life and business coverage from multiple carriers for families and businesses across Northeast Indiana.",
+    "Andrews Insurance Agency is an independent insurance agency in Kendallville, Indiana that compares auto, home, health, life, disability and business coverage from about 50 insurance companies for families and businesses across Northeast Indiana.",
   foundingYear: "2023",
+  /** Approximate number of insurance companies the agency can place coverage with. */
+  carrierCount: "about 50",
   priceRange: "$$",
   phone: {
     display: "(260) 582-7681",
@@ -65,7 +67,7 @@ export const broker = {
 
 export const counties = ["Noble", "DeKalb", "Allen", "LaGrange", "Steuben"] as const;
 
-export type CoverageKey = "auto" | "home" | "health" | "life" | "commercial";
+export type CoverageKey = "auto" | "home" | "health" | "life" | "disability" | "commercial";
 
 export const coverageOptions: {
   key: CoverageKey;
@@ -77,7 +79,8 @@ export const coverageOptions: {
   { key: "home", label: "Home & Property", short: "Home", slug: "homeowners-insurance" },
   { key: "health", label: "Health, Dental & Vision", short: "Health", slug: "health-insurance" },
   { key: "life", label: "Life Insurance", short: "Life", slug: "life-insurance" },
-  { key: "commercial", label: "Business & Farm", short: "Business", slug: "commercial-insurance" },
+  { key: "disability", label: "Disability Income", short: "Disability", slug: "disability-insurance" },
+  { key: "commercial", label: "Business & Corporate", short: "Business", slug: "commercial-insurance" },
 ];
 
 export type Carrier = {
@@ -135,9 +138,14 @@ export const navigation = {
       blurb: "Term, whole life, final expense and mortgage protection",
     },
     {
+      href: "/coverage/disability-insurance",
+      label: "Disability Insurance",
+      blurb: "Short-term and long-term disability income protection",
+    },
+    {
       href: "/coverage/commercial-insurance",
-      label: "Business & Farm",
-      blurb: "Liability, BOP, commercial auto, workers' comp and farm",
+      label: "Business & Corporate",
+      blurb: "Liability, garage policies, BOP, commercial auto and workers' comp",
     },
   ],
   primary: [
@@ -177,7 +185,7 @@ export const homeFaqs = [
   {
     question: "What does an independent insurance agency do differently?",
     answer:
-      "An independent agency is not tied to one insurance company. Andrews Insurance Agency compares coverage and pricing from multiple carriers on your behalf, explains the differences in plain English, and stays with you as your advocate when you have a billing question or a claim.",
+      "An independent agency is not tied to one insurance company. Andrews Insurance Agency compares coverage and pricing from about 50 insurance companies on your behalf, explains the differences in plain English, and stays with you as your advocate when you have a billing question or a claim.",
   },
   {
     question: "Does it cost more to buy insurance through Andrews Insurance Agency?",
@@ -211,7 +219,7 @@ export const independentComparison = {
   rows: [
     {
       feature: "Carriers compared for you",
-      values: ["Multiple carriers", "One company", "One company"],
+      values: ["About 50 companies", "One company", "One company"],
     },
     {
       feature: "Who you talk to",
@@ -226,7 +234,7 @@ export const independentComparison = {
       values: ["Personal advocacy from your broker", "Varies by agent", "Call center claims line"],
     },
     {
-      feature: "Auto, home, health, life and business in one place",
+      feature: "Auto, home, health, life, disability and business in one place",
       values: ["Yes", "Depends on the company", "Usually limited lines"],
     },
     {
