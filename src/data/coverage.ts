@@ -115,7 +115,7 @@ export const coverageLines: CoverageLine[] = [
     h1: "Individual & Family Health, Dental & Vision Insurance",
     metaTitle: "Health Insurance in Kendallville, IN | ACA Marketplace, Dental & Vision",
     metaDescription:
-      "Local help comparing ACA Marketplace health plans, dental and vision coverage, short-term medical and Medicare options in Kendallville and Northeast Indiana.",
+      "Local help comparing ACA Marketplace health plans, dental and vision coverage, and short-term medical options in Kendallville and Northeast Indiana.",
     quickAnswer:
       "Andrews Insurance Agency helps Northeast Indiana individuals and families compare ACA Marketplace health plans, off-exchange medical, short-term health, and dental and vision coverage. Indiana uses the federal HealthCare.gov Marketplace. Enrolling through a licensed broker costs nothing extra, and we check your eligibility for premium tax credits.",
     intro:
@@ -132,7 +132,6 @@ export const coverageLines: CoverageLine[] = [
       { title: "Dental insurance", description: "Individual and family dental plans covering preventive care, basic services and major work." },
       { title: "Vision insurance", description: "Plans that help pay for eye exams, frames, lenses and contacts." },
       { title: "HSA-compatible plans", description: "High-deductible health plans that pair with a tax-advantaged Health Savings Account." },
-      { title: "Medicare transition", description: "A consultation as you approach 65 to understand how Medicare Supplement and Medicare Advantage options work." },
     ],
     localInsights: [
       { title: "Check your doctors and hospitals first", description: "Plan networks differ. Before you enroll, we confirm that the Northeast Indiana physicians and hospital systems you rely on are in network for the plan you are considering." },
@@ -143,7 +142,7 @@ export const coverageLines: CoverageLine[] = [
       { question: "Does it cost extra to enroll in a Marketplace plan through a broker?", answer: "No. Premiums are the same whether you enroll through HealthCare.gov directly or with a licensed broker. Our help comparing plans and completing the application is free to you." },
       { question: "When can I enroll in health insurance?", answer: "You can enroll during the annual open enrollment period, which typically begins November 1, or within about 60 days of a qualifying life event such as losing other coverage, getting married, having a baby or moving. Check HealthCare.gov for current deadlines." },
       { question: "Can I buy dental and vision insurance without a health plan?", answer: "Yes. Standalone dental and vision plans can be purchased at any time of year, on their own or alongside a medical plan." },
-      { question: "Do you help with Medicare?", answer: "We offer consultations for people approaching Medicare eligibility. We do not offer every plan available in your area; contact Medicare.gov or 1-800-MEDICARE for information on all of your options." },
+      { question: "Do you offer Medicare or Medicaid plans?", answer: "No. We do not sell or enroll Medicare or Medicaid plans. For Medicare, visit Medicare.gov or call 1-800-MEDICARE. For Indiana Medicaid programs, contact the Indiana Family and Social Services Administration (FSSA)." },
     ],
   },
   {

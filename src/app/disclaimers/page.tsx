@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 const title = "Licensing & Disclaimers";
 const description =
-  "Licensing information for Andrews Insurance Agency and Principal Broker Justin Michael Andrews, plus state availability, Marketplace, Medicare and carrier disclaimers.";
+  "Licensing information for Andrews Insurance Agency and Principal Broker Justin Michael Andrews, plus state availability, Marketplace and carrier disclaimers.";
 const path = "/disclaimers";
 
 export const metadata: Metadata = pageMetadata({ title, description, path });
@@ -54,8 +54,8 @@ export default function DisclaimersPage() {
       <h2>Health Insurance Marketplace</h2>
       <p>{legal.marketplace}</p>
 
-      <h2>Medicare</h2>
-      <p>{legal.medicare}</p>
+      <h2>Medicare and Medicaid</h2>
+      <p>{legal.notOffered}</p>
 
       <h2>Carriers and trademarks</h2>
       <p>

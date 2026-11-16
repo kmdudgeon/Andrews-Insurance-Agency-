@@ -140,6 +140,6 @@ ${legal.licensing}
 
 ${legal.marketplace}
 
-${legal.medicare}
+${legal.notOffered}
 `;
 }

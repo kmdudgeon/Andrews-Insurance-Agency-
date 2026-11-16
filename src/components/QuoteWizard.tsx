@@ -78,7 +78,7 @@ const detailFields: Record<CoverageKey, { title: string; fields: DetailField[] }
     title: "Household",
     fields: [
       { key: "health_household_size", label: "People needing coverage", options: ["1", "2", "3", "4", "5 or more"] },
-      { key: "health_interest", label: "What are you looking for?", options: ["Marketplace (ACA) health plan", "Dental and/or vision", "Short-term medical", "Medicare consultation", "Not sure yet"] },
+      { key: "health_interest", label: "What are you looking for?", options: ["Marketplace (ACA) health plan", "Dental and/or vision", "Short-term medical", "Not sure yet"] },
     ],
   },
   life: {

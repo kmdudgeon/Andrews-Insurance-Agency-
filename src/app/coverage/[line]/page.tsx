@@ -162,8 +162,8 @@ export default async function CoveragePage({ params }: PageProps<"/coverage/[lin
             <PlainNotice title="Health Insurance Marketplace notice">
               <p>{legal.marketplace}</p>
             </PlainNotice>
-            <PlainNotice title="Medicare notice">
-              <p>{legal.medicare}</p>
+            <PlainNotice title="Medicare and Medicaid">
+              <p>{legal.notOffered}</p>
             </PlainNotice>
           </>
         ) : null}

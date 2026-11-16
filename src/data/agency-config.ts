@@ -127,7 +127,7 @@ export const navigation = {
     {
       href: "/coverage/health-insurance",
       label: "Health, Dental & Vision",
-      blurb: "ACA Marketplace plans, dental, vision and Medicare",
+      blurb: "ACA Marketplace plans, dental and vision coverage",
     },
     {
       href: "/coverage/life-insurance",
@@ -167,8 +167,8 @@ export const legal = {
     "Andrews Insurance Agency is an independent insurance agency headquartered at 119 West Mitchell Street #3, Kendallville, IN 46755. Principal Broker: Justin Michael Andrews (National Producer Number / NPN #19991623; Nonresident Health License #W925384). Licensed to solicit and transact insurance in the State of Indiana and applicable nonresident jurisdictions.",
   marketplace:
     "Andrews Insurance Agency is a licensed independent insurance brokerage. This website is not the Health Insurance Marketplace® website and is not operated by, affiliated with, or endorsed by the federal government, the Centers for Medicare & Medicaid Services (CMS), or HealthCare.gov. Plan availability, premiums, and eligibility for premium tax credits or cost-sharing reductions are determined by the Marketplace and the issuing carrier.",
-  medicare:
-    "We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov, 1-800-MEDICARE (TTY 1-877-486-2048), or your local State Health Insurance Program (SHIP) to get information on all of your options. Andrews Insurance Agency is not connected with or endorsed by the U.S. government or the federal Medicare program.",
+  notOffered:
+    "Andrews Insurance Agency does not sell or enroll Medicare or Medicaid plans. For Medicare, visit Medicare.gov or call 1-800-MEDICARE. For Indiana Medicaid programs, contact the Indiana Family and Social Services Administration (FSSA).",
   sensitiveData:
     "For your protection, please do not enter Social Security numbers, driver's license numbers, payment card numbers, or medical history into this form.",
 } as const;

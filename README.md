@@ -47,7 +47,6 @@ Have the principal broker confirm the items below; they came from the project br
 
 - License numbers, office address and hours in `src/data/agency-config.ts`
 - Carrier list and carrier phone numbers (currently Ameritas and VSP only)
-- The Medicare notice wording, which CMS updates periodically, and whether Medicare products are offered
 - The privacy policy, terms and disclaimers, ideally with an attorney or compliance contact
 - Which Facebook page to link in the footer
 - Real client reviews, if any should be shown on the site (the `testimonials` table is ready; none are published)
