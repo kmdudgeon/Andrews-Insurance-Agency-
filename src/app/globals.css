@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy-950: #0a1a28;
+  --color-navy-900: #0f2537;
+  --color-navy-800: #17344d;
+  --color-navy-700: #214664;
+  --color-navy-100: #dbe6f0;
+  --color-navy-50: #eef3f8;
+  --color-royal: #1d4ed8;
+  --color-royal-dark: #1e40af;
+  --color-cta: #b45309;
+  --color-cta-dark: #92400e;
+  --color-gold: #fbbf24;
+  --color-surface: #f8fafc;
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+  --color-line: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-royal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.on-dark :focus-visible,
+.on-dark:focus-visible {
+  outline-color: var(--color-gold);
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn-cta,
+  .btn-gold,
+  .btn-outline,
+  .btn-ghost-dark {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 py-3 text-base font-semibold transition-colors duration-150;
+  }
+  .btn-cta {
+    @apply bg-cta text-white hover:bg-cta-dark;
+  }
+  .btn-gold {
+    @apply bg-gold text-navy-950 hover:bg-amber-300;
+  }
+  .btn-outline {
+    @apply border border-navy-900 bg-white text-navy-900 hover:bg-navy-50;
+  }
+  .btn-ghost-dark {
+    @apply border border-white/40 text-white hover:bg-white/10;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-white p-6 shadow-sm;
+  }
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-wider text-royal;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-ink;
+  }
+  .field-input {
+    @apply block min-h-12 w-full rounded-lg border border-slate-400 bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-slate-500 focus:border-royal focus:ring-2 focus:ring-royal/30 focus:outline-none;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm font-medium text-red-700;
+  }
+  .prose-legal h2 {
+    @apply mt-10 mb-3 text-2xl font-bold text-navy-900;
+  }
+  .prose-legal h3 {
+    @apply mt-6 mb-2 text-lg font-bold text-navy-900;
+  }
+  .prose-legal p,
+  .prose-legal li {
+    @apply leading-relaxed text-slate-700;
+  }
+  .prose-legal p {
+    @apply mb-4;
+  }
+  .prose-legal ul {
+    @apply mb-4 list-disc space-y-2 pl-6;
+  }
+  .prose-legal a {
+    @apply font-medium text-royal underline underline-offset-2 hover:text-royal-dark;
+  }
+}
